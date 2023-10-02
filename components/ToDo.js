@@ -7,14 +7,13 @@ const ToDo = ({ todo }) => {
    
     return (
         <Card style={styles.card}>
-        <View style={styles.todo}>
-        <CheckBox
-        status={todo.completed ? "checked" : "unchecked"}
-        onPress={() => toggleCompleted(todo.id)}
-        />
-        <Text style={todo.completed ? styles.done : styles.text}>{todo.text}</Text>
-
-        </View>
+          <View style={styles.todo}>
+            <CheckBox
+              status={todo.completed ? "checked" : "unchecked"}
+              onPress={() => toggleCompleted(todo.id)}
+            />
+          <Text style={todo.completed ? styles.done : styles.text}>{todo.text}</Text>
+          </View>
         </Card>
     );
   }
